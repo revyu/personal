@@ -1,4 +1,11 @@
 {
+  "name": "personal-page",
+  "version": "1.0.0",
+  "description": "Учебный проект на Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.21.1"
   }
