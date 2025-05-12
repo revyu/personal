@@ -1,9 +1,12 @@
+const { prototype } = require('events');
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+const hostport = process.env.HOST || prototype;
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public'))); // Статические файлы
 
@@ -53,5 +56,5 @@ app.post('/comments', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`Сервер запущен на http://localhost:${PORT}`);
+    console.log(`Сервер запущен на http://localhost:${hostport}`);
 });
